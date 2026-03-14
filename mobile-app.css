@@ -1,0 +1,156 @@
+/* ===============================
+   Mobile App Course Styles
+================================ */
+
+.mobile-hero{
+padding-top:120px;
+padding-bottom:70px;
+text-align:center;
+background:linear-gradient(120deg,#020617,#0f172a);
+}
+
+.mobile-hero h1{
+font-size:42px;
+color:#22c55e;
+margin-bottom:10px;
+}
+
+.mobile-hero p{
+color:#cbd5f5;
+font-size:18px;
+}
+
+
+
+/* ===============================
+   Course Layout
+================================ */
+
+.mobile-course-container{
+padding:80px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
+}
+
+
+
+/* ===============================
+   Topic Card
+================================ */
+
+.topic-card{
+background:#020617;
+padding:30px;
+border-radius:12px;
+line-height:1.8;
+font-size:15px;
+transition:0.4s;
+position:relative;
+overflow:hidden;
+}
+
+.topic-card:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 40px rgba(0,0,0,0.6);
+}
+
+.topic-card h2{
+font-size:22px;
+margin-bottom:15px;
+}
+
+
+
+/* ===============================
+   Topic Images
+================================ */
+
+.topic-image{
+margin:15px 0;
+text-align:center;
+}
+
+.topic-image img{
+width:100%;
+max-width:420px;
+border-radius:10px;
+box-shadow:0 10px 30px rgba(0,0,0,0.6);
+transition:0.4s;
+}
+
+.topic-image img:hover{
+transform:scale(1.05);
+}
+
+
+
+/* ===============================
+   Topic Colors
+================================ */
+
+.ide{
+border-left:6px solid #2563eb;
+}
+
+.framework{
+border-left:6px solid #22c55e;
+}
+
+.project{
+border-left:6px solid #f59e0b;
+}
+
+.framework-select{
+border-left:6px solid #a855f7;
+}
+
+.ui{
+border-left:6px solid #06b6d4;
+}
+
+.logic{
+border-left:6px solid #eab308;
+}
+
+.testing{
+border-left:6px solid #10b981;
+}
+
+.build{
+border-left:6px solid #ef4444;
+}
+
+
+
+/* ===============================
+   Topic List Styling
+================================ */
+
+.topic-card ul{
+margin-top:10px;
+padding-left:20px;
+}
+
+.topic-card li{
+margin-bottom:6px;
+color:#e2e8f0;
+}
+
+
+
+/* ===============================
+   Mobile Responsive
+================================ */
+
+@media (max-width:768px){
+
+.mobile-hero h1{
+font-size:30px;
+}
+
+.mobile-course-container{
+padding:40px;
+}
+
+}

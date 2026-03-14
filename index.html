@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Code Craft Ethiopia Academy</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="mobile-app.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<!-- Firebase App -->
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+
+<!-- Firebase Auth -->
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+
+</head>
+
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">Code Craft Ethiopia Academy</div>
+
+<ul class="nav-links">
+<li><a href="#home">Home</a></li>
+<li><a href="#courses">Courses</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+</header>
+
+
+
+<!-- ================= HERO SECTION ================= -->
+
+<section id="home" class="hero">
+
+<div class="hero-text">
+
+<h1>Learn Mobile Software Engineering</h1>
+
+<p>
+Android Development • Windows Tools • Reverse Engineering • Web Development
+</p>
+
+<button onclick="scrollToCourses()" class="hero-btn">
+Explore Courses
+</button>
+
+</div>
+
+
+<div class="hero-animation">
+
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= COURSES ================= -->
+
+<section id="courses" class="courses">
+
+<h2>Our Courses</h2>
+<div class="course-container">
+
+<a href="mobile-software.html" class="course-card">
+
+<h3>Mobile Software Course</h3>
+
+<p>
+Learn Bootrom, Preloader, FRP, IMEI Repair and Mobile Flashing.
+</p>
+
+<button class="course-btn">Start Course</button>
+
+</a>
+
+
+
+<a href="mobile-app.html" class="course-card">
+
+<h3>Mobile App Development</h3>
+
+<p>
+Build Android applications using modern technologies.
+</p>
+
+<button class="course-btn">Start Course</button>
+
+</a>
+
+
+
+<a href="windows-app.html" class="course-card">
+
+<h3>Windows/Desktop App Development</h3>
+
+<p>
+Create professional Windows tools using C# and .NET.
+</p>
+
+<button class="course-btn">Start Course</button>
+
+</a>
+
+
+
+<a href="web-development.html" class="course-card">
+
+<h3>Website Development</h3>
+
+<p>
+Learn HTML, CSS, JavaScript and modern web technologies.
+</p>
+
+<button class="course-btn">Start Course</button>
+
+</a>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about" class="about">
+
+<div class="about-container">
+
+<div class="about-image">
+<img src="images/alexo.jpg" alt="Alexo Profile">
+</div>
+
+
+<div class="about-content">
+
+<h2>About Me</h2>
+
+<p>
+
+My name is Haile Yilma. I am a software developer and instructor specializing in mobile software engineering and application development.
+
+I teach students how to understand mobile systems, develop software tools, and build modern applications including Android apps, Windows desktop tools, mobile repair software, and web platforms.
+
+My goal is to help students gain practical skills and become professional mobile software engineers and developers.
+
+</p>
+
+
+<div class="skills">
+
+<span>C#</span>
+<span>Android</span>
+<span>Reverse Engineering</span>
+<span>Mobile Software</span>
+<span>Web Development</span>
+<span>WPF / .NET</span>
+
+</div>
+
+
+
+<div class="stats">
+
+<div class="stat">
+<h3>500+</h3>
+<p>Students</p>
+</div>
+
+<div class="stat">
+<h3>6+</h3>
+<p>Courses</p>
+</div>
+
+<div class="stat">
+<h3>5+</h3>
+<p>Software Tools</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact" class="contact">
+
+<h2>Contact Me</h2>
+
+<div class="contact-container">
+
+<a class="contact-card email" href="mailto:engineerhaile1@gmail.com">
+<span class="icon">📧</span>
+<p>Email</p>
+</a>
+
+<a class="contact-card telegram" href="https://t.me/codecraftethiopia" target="_blank">
+<span class="icon">📨</span>
+<p>Telegram</p>
+</a>
+
+<a class="contact-card whatsapp" href="https://wa.me/251979005248" target="_blank">
+<span class="icon">💬</span>
+<p>WhatsApp</p>
+</a>
+
+<a class="contact-card phone" href="tel:+251979005248">
+<span class="icon">📞</span>
+<p>Call</p>
+</a>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<p>© 2026 Code Craft Ethiopia Academy</p>
+
+</footer>
+
+
+
+<!-- ================= SCRIPT ================= -->
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

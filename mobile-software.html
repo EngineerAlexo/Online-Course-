@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mobile Software Engineering Course</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="mobile-course.css">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<div class="logo">Code craft Ethiopia Academy</div>
+
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="mobile-software.html">Mobile Software</a></li>
+<li><a href="mobile-app.html">Mobile App</a></li>
+<li><a href="web-development.html">Web Development</a></li>
+</ul>
+
+</nav>
+
+
+<section class="course-hero">
+
+<h1>Mobile Software Engineering</h1>
+
+<p>Professional training for mobile repair software and system unlocking.</p>
+
+</section>
+
+
+
+<section class="course-content">
+
+<div class="topic-card bootrom">
+
+<h2>BootROM</h2>
+
+<div class="topic-image">
+<img src="images/bootrom-diagram.png" alt="BootROM Diagram">
+</div>
+
+<p>
+
+BootROM (Boot Read Only Memory) is the first code executed when a mobile
+device powers on. It is permanently stored inside the chipset and cannot
+be modified or erased.
+
+BootROM performs the first stage of hardware initialization and then
+loads the next boot stage such as the Preloader.
+
+Main Responsibilities:
+
+• Initialize CPU and hardware  
+• Verify device security  
+• Load the Preloader  
+• Provide emergency flashing mode  
+
+BootROM mode is very important for mobile technicians because it allows
+communication with a device even when Android is completely damaged.
+
+</p>
+
+</div>
+
+
+<div class="topic-card preloader">
+
+<h2>Preloader</h2>
+
+<div class="topic-image">
+<img src="images/preloader-process.png" alt="Preloader Process">
+</div>
+
+<p>
+
+Preloader is the second stage in the mobile boot process.
+
+After BootROM finishes hardware initialization, the Preloader loads and
+prepares the device to start Android.
+
+Functions of Preloader:
+
+• Initialize RAM  
+• Prepare device drivers  
+• Initialize display and USB  
+• Load Android bootloader
+
+If the preloader becomes corrupted, the phone may appear completely dead.
+
+However, technicians can still access BootROM mode to repair the device.
+
+</p>
+
+</div>
+
+
+
+<div class="topic-card recovery">
+
+<h2>Recovery Mode</h2>
+
+<div class="topic-image">
+<img src="images/android-recovery.png" alt="Recovery Mode">
+</div>
+
+<p>
+
+Recovery Mode is a special environment inside Android devices used for maintenance and troubleshooting.
+
+It allows users and technicians to perform system operations without fully booting the Android operating system.
+
+Common Recovery Functions:
+
+• Factory Reset (wipe user data)  
+• Install system updates  
+• Clear cache partitions  
+• Install custom ROMs  
+• Repair system errors  
+
+There are two main types of recovery systems:
+
+Stock Recovery  
+This is the official recovery system provided by the manufacturer.
+
+Custom Recovery  
+Examples include TWRP or OrangeFox which allow advanced features such as installing custom ROMs and backups.
+
+Recovery mode is usually accessed by pressing a combination of hardware buttons while powering on the device.
+
+</p>
+
+</div>
+
+
+
+<div class="topic-card reset">
+
+<h2>Hard Reset (Factory Reset)</h2>
+<div class="topic-image">
+<img src="images/factory-reset.png" alt="Factory Reset">
+</div>
+
+<p>
+
+A Hard Reset, also known as Factory Reset, is the process of restoring a phone to its original factory state.
+
+This operation deletes all user data such as:
+
+• Installed applications  
+• User accounts  
+• Photos and files  
+• Settings and configurations  
+
+After a hard reset, the phone behaves like a brand new device.
+
+Hard reset is commonly used when:
+
+• The phone is extremely slow  
+• The device is locked  
+• The system is corrupted  
+• Preparing the phone for resale  
+
+However, modern Android devices include security features such as FRP which may require the original Google account after resetting.
+
+</p>
+
+</div>
+
+
+
+<div class="topic-card frp">
+
+<h2>Factory Reset Protection (FRP)</h2>
+
+<div class="topic-image">
+<img src="images/frp-lock.png" alt="FRP Lock Screen">
+</div>
+
+<p>
+
+FRP is a security feature introduced in Android 5.1.
+
+When a phone is factory reset without removing the Google account,
+Android will require the previously synchronized account during setup.
+
+Purpose of FRP:
+
+• Protect personal data  
+• Prevent stolen device usage  
+• Ensure owner verification
+
+Mobile technicians sometimes perform FRP bypass procedures
+when the original account credentials are forgotten.
+
+</p>
+
+</div>
+
+<div class="topic-card imei">
+
+<h2>IMEI Repair</h2>
+
+<div class="topic-image">
+<img src="images/imei-repair.png" alt="Imei Repair">
+</div>
+
+<p>
+
+IMEI stands for International Mobile Equipment Identity.
+
+It is a unique identification number assigned to every mobile device.
+
+The IMEI number is used by mobile networks to identify valid devices and prevent illegal usage.
+
+Functions of IMEI:
+
+• Identify mobile devices on cellular networks  
+• Block stolen devices from network access  
+• Track device authentication  
+
+If the IMEI becomes invalid or corrupted, the phone may display:
+
+"No Service"  
+"Invalid IMEI"
+
+Technicians repair IMEI by rewriting the correct number to system partitions such as:
+
+• NVRAM  
+• EFS  
+• Modem partition
+
+Specialized mobile servicing tools are required to perform IMEI repair.
+
+</p>
+
+</div>
+
+
+
+<div class="topic-card mdm">
+
+<h2>Mobile Device Management (MDM)</h2>
+
+<div class="topic-image">
+<img src="images/mdm-lock.png" alt="MDM ">
+</div>
+
+<p>
+
+MDM stands for Mobile Device Management.
+
+It is a system used by companies and organizations to control mobile devices remotely.
+
+Organizations install MDM software on employee devices to manage security and enforce policies.
+
+Capabilities of MDM systems:
+
+• Lock or unlock devices remotely  
+• Track device location  
+• Install corporate applications  
+• Restrict device functions  
+• Erase sensitive data remotely
+
+Sometimes when companies sell or release devices, the MDM lock remains active and prevents normal usage.
+
+Technicians must remove the MDM configuration to restore full device functionality.
+
+</p>
+
+</div>
+
+
+
+<div class="topic-card kg">
+
+<h2>Knox Guard (KG Lock)</h2>
+
+<div class="topic-image">
+<img src="images/kg-lock.png" alt="KG ">
+</div>
+
+<p>
+
+KG Lock stands for Knox Guard Lock.
+
+It is a security system developed by Samsung to protect devices that are purchased using installment payments.
+
+Retailers and finance companies use Knox Guard to ensure that customers complete their payments.
+
+Features of KG Lock:
+
+• Remote device locking  
+• Payment tracking  
+• Secure device management  
+
+If a customer fails to complete payments, the device may become locked and display payment warning messages.
+
+Professional technicians may remove KG lock using authorized service procedures or specialized unlocking methods.
+
+</p>
+
+</div>
+
+
+
+
+
+</section>
+
+
+</body>
+</html>

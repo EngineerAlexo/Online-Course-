@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Dashboard</title>
+<link rel="stylesheet" href="style.css">
+
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">Code Craft Ethiopia Academy</div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#" onclick="logout()">Logout</a></li>
+    </ul>
+</nav>
+
+<section class="dashboard">
+    <h1 id="welcome-text">Welcome Student</h1>
+    <p>Select your course to start learning.</p>
+
+    <div class="course-container">
+        <a href="mobile-software.html" class="course-card">
+            <h3>Mobile Software Course</h3>
+            <p>Bootrom, Preloader, FRP, IMEI Repair</p>
+            <button class="course-btn">Start Learning</button>
+        </a>
+
+        <a href="mobile-app.html" class="course-card">
+            <h3>Mobile App Development</h3>
+            <p>Build Android Applications</p>
+            <button class="course-btn">Start Learning</button>
+        </a>
+
+        <a href="windows-app.html" class="course-card">
+            <h3>Windows App Development</h3>
+            <p>Create Tools using C# and .NET</p>
+            <button class="course-btn">Start Learning</button>
+        </a>
+
+        <a href="web-development.html" class="course-card">
+            <h3>Website Development</h3>
+            <p>HTML, CSS, JavaScript</p>
+            <button class="course-btn">Start Learning</button>
+        </a>
+    </div>
+</section>
+
+<script>
+// Firebase config
+const firebaseConfig = {
+  apiKey: "AIzaSyCnPkV0kC7_HtlUYnfUzD_aO0U6rhfopf8",
+  authDomain: "online-exam-system-33281.firebaseapp.com",
+  projectId: "online-exam-system-33281",
+  storageBucket: "online-exam-system-33281.firebasestorage.app",
+  messagingSenderId: "690568730610",
+  appId: "1:690568730610:web:fb2ec21aaf9642f8883d6b"
+};
+firebase.initializeApp(firebaseConfig);
+const auth = firebase.auth();
+
+// Dashboard protection
+auth.onAuthStateChanged(user => {
+    if (user) {
+        document.getElementById("welcome-text").textContent = `Welcome, ${user.email}`;
+    } else {
+        alert("You must be logged in to access the dashboard!");
+        window.location.href = "login.html";
+    }
+});
+
+// Logout
+function logout() {
+    auth.signOut()
+        .then(() => {
+            alert("Logged Out Successfully");
+            window.location.href = "index.html";
+        })
+        .catch(error => console.error(error));
+}
+
+// Start course buttons
+document.querySelectorAll(".course-btn").forEach((btn, index) => {
+    const courseLinks = [
+        "mobile-software.html",
+        "mobile-app.html",
+        "windows-app.html",
+        "web-development.html"
+    ];
+    btn.addEventListener("click", e => {
+        e.preventDefault();
+        const user = auth.currentUser;
+        if (user) {
+            window.location.href = courseLinks[index];
+        } else {
+            alert("Please login to access this course.");
+            sessionStorage.setItem("redirectAfterLogin", courseLinks[index]);
+            window.location.href = "login.html";
+        }
+    });
+});
+</script>
+
+</body>
+</html>

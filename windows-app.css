@@ -1,0 +1,83 @@
+/* ===============================
+   Windows/Desktop App Styles
+================================ */
+
+.windows-hero{
+padding-top:120px;
+padding-bottom:70px;
+text-align:center;
+background:linear-gradient(120deg,#020617,#1e293b);
+}
+
+.windows-hero h1{
+font-size:42px;
+color:#22c55e;
+margin-bottom:10px;
+}
+
+.windows-hero p{
+color:#cbd5f5;
+font-size:18px;
+}
+
+/* Course Layout */
+.windows-course-container{
+padding:80px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
+}
+
+/* Topic Card */
+.topic-card{
+background:#020617;
+padding:30px;
+border-radius:12px;
+line-height:1.8;
+font-size:15px;
+transition:0.4s;
+position:relative;
+overflow:hidden;
+}
+
+.topic-card:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 40px rgba(0,0,0,0.6);
+}
+
+.topic-card h2{
+font-size:22px;
+margin-bottom:15px;
+}
+
+/* Topic Images */
+.topic-image{
+margin:15px 0;
+text-align:center;
+}
+
+.topic-image img{
+width:100%;
+max-width:420px;
+border-radius:10px;
+box-shadow:0 10px 30px rgba(0,0,0,0.6);
+transition:0.4s;
+}
+
+.topic-image img:hover{
+transform:scale(1.05);
+}
+
+/* Topic Colored Borders */
+.csharp{ border-left:6px solid #2563eb; }
+.dotnet{ border-left:6px solid #22c55e; }
+.wpf{ border-left:6px solid #a855f7; }
+.adb{ border-left:6px solid #f59e0b; }
+.tools{ border-left:6px solid #ef4444; }
+.license{ border-left:6px solid #ec4899; }
+
+/* Responsive */
+@media(max-width:768px){
+.windows-hero h1{ font-size:30px; }
+.windows-course-container{ padding:40px; }
+}
